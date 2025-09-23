@@ -1,5 +1,13 @@
+library(tidyverse)
 library(DBI)
 library(RPostgres)
+library(glue)
+require(knitr)
+library(dbplyr)
+# library(sqlpetr)
+# library(bookdown)
+# library(here)
+# library(connections)
 
 con <- dbConnect(          # use in other settings
   RPostgres::Postgres(),
@@ -15,4 +23,9 @@ con <- dbConnect(          # use in other settings
 print(con)
 dbExecute(con, "set search_path to sales;")
 dbListTables(con)
-dbDisconnect(con)
+
+dbListFields(con, "salesorderheader")
+
+tbl(con, in_schema("sales", "salesorderheader")) %>%
+  head()
+# dbDisconnect(con)
