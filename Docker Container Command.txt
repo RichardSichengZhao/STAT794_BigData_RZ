@@ -1,0 +1,9 @@
+export MYDIR=$(pwd)
+
+docker run -e POSTGRES_PASSWORD="postgres" --detach  --name adventureworks --publish 5432:5432 --mount type=bind,source=$MYDIR,target=/petdir mypsql
+
+docker exec adventureworks psql -U postgres -c "CREATE DATABASE Adventureworks;"
+
+docker exec adventureworks psql -U postgres -d Adventureworks -f install.sql
+
+docker rm --force adventrueworks
