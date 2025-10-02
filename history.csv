@@ -1,0 +1,8 @@
+#TYPE Microsoft.PowerShell.Commands.HistoryInfo
+"Id","CommandLine","ExecutionStatus","StartExecutionTime","EndExecutionTime"
+"1","cd ctls","Completed","2025/10/2 15:34:09","2025/10/2 15:34:09"
+"2","cd .\clts\","Completed","2025/10/2 15:34:13","2025/10/2 15:34:13"
+"3","ls","Completed","2025/10/2 15:34:14","2025/10/2 15:34:14"
+"4","docker run --rm -it -v ${PWD}:/home/dst/data datasciencetoolbox/dsatcl2e","Completed","2025/10/2 15:34:33","2025/10/2 16:25:48"
+"5","Get-History | Export-Csv - path ""D:\GitHub\STAT794_BigData_RZ""","Completed","2025/10/2 16:26:20","2025/10/2 16:26:21"
+"6","Get-History | Export-Csv - path ""D:\GitHub\STAT794_BigData_RZ\history.csv""","Completed","2025/10/2 16:27:00","2025/10/2 16:27:00"
